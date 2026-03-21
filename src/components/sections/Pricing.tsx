@@ -86,7 +86,9 @@ export function Pricing() {
                 ))}
               </div>
 
-              <button className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-widest transition-all ${
+              <button 
+                onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+                className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-widest transition-all ${
                 tier.highlight 
                   ? 'bg-brand-blue text-white hover:bg-white hover:text-brand-blue' 
                   : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'

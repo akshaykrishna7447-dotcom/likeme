@@ -39,10 +39,16 @@ export function Footer() {
           <div>
              <h4 className="text-lg font-luxury text-white mb-8 uppercase tracking-widest text-sm">Navigation</h4>
              <ul className="space-y-4">
-              {['Home', 'Services', 'Pricing', 'Terms', 'Privacy'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm uppercase tracking-widest text-white/40 hover:text-brand-blue transition-colors">
-                    {item}
+              {[
+                { name: 'Home', href: '#' },
+                { name: 'Services', href: '#services' },
+                { name: 'Pricing', href: '#pricing' },
+                { name: 'Team', href: '#team' },
+                { name: 'Contact', href: '#contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm uppercase tracking-widest text-white/40 hover:text-brand-blue transition-colors">
+                    {item.name}
                   </Link>
                 </li>
               ))}

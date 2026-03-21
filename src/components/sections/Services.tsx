@@ -106,9 +106,12 @@ function ServiceCard({ service, index }: { service: typeof services[0], index: n
           <p className="text-white/60 text-sm leading-relaxed mb-6 font-sans">
             {service.description}
           </p>
-          <div className="flex items-center gap-2 text-brand-blue text-xs uppercase tracking-widest font-bold">
+          <button 
+            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            className="flex items-center gap-2 text-brand-blue text-xs uppercase tracking-widest font-bold hover:text-white transition-colors"
+          >
             View Details <ChevronRight className="w-4 h-4" />
-          </div>
+          </button>
         </div>
       </div>
     </motion.div>
@@ -117,7 +120,7 @@ function ServiceCard({ service, index }: { service: typeof services[0], index: n
 
 export function Services() {
   return (
-    <section id="services" className="py-24 px-6 bg-luxury-black overflow-hidden">
+    <section id="services" className="py-24 px-6 bg-brand-black/50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">

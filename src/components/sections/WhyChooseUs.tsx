@@ -31,15 +31,17 @@ export function WhyChooseUs() {
   return (
     <section className="py-24 px-6 bg-brand-black/50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <RevealText>
-            <span className="text-brand-blue uppercase tracking-[0.3em] text-xs font-bold mb-4 block">
-              Beyond the Mirror
-            </span>
-          </RevealText>
-          <h2 className="text-5xl md:text-7xl font-luxury mb-4">
-            <RevealText delay={0.2}>Why Choose <span className="text-brand-blue">LIKE ME?</span></RevealText>
-          </h2>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="max-w-2xl">
+            <RevealText>
+              <span className="text-brand-blue uppercase tracking-[0.3em] text-xs font-bold mb-4 block">
+                Beyond the Mirror
+              </span>
+            </RevealText>
+            <h2 className="text-5xl md:text-7xl font-luxury mb-4 leading-tight">
+              <RevealText delay={0.2}>Why <span className="text-brand-blue">Choose</span> LIKE ME?</RevealText>
+            </h2>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

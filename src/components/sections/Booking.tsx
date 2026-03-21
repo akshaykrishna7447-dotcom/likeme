@@ -20,18 +20,18 @@ export function Booking() {
   }
 
   return (
-    <section id="booking" className="py-24 px-6 bg-luxury-black relative">
-       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-luxury-gold/5 blur-[150px] rounded-full pointer-events-none" />
+    <section id="booking" className="py-24 px-6 bg-brand-black relative">
+       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 blur-[150px] rounded-full pointer-events-none" />
        
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <RevealText>
-            <span className="text-luxury-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 block">
+            <span className="text-brand-blue uppercase tracking-[0.3em] text-xs font-bold mb-4 block">
               Reservation
             </span>
           </RevealText>
-          <h2 className="text-5xl md:text-7xl font-luxury mb-4">
-            <RevealText delay={0.2}>Start Your <span className="text-luxury-gold">Journey.</span></RevealText>
+          <h2 className="text-5xl md:text-7xl font-luxury mb-4 leading-tight">
+            <RevealText delay={0.2}>Start Your <span className="text-brand-blue">Journey.</span></RevealText>
           </h2>
         </div>
 
@@ -104,8 +104,8 @@ export function Booking() {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center py-12"
             >
-              <div className="w-24 h-24 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-                <CheckCircle2 className="w-12 h-12 text-luxury-gold" />
+              <div className="w-24 h-24 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
+                <CheckCircle2 className="w-12 h-12 text-brand-blue" />
               </div>
               <h3 className="text-4xl font-luxury text-white mb-4">Transformation Confirmed.</h3>
               <p className="text-white/50 mb-10 text-sm max-w-sm mx-auto leading-relaxed">
@@ -113,7 +113,7 @@ export function Booking() {
               </p>
               <button
                 onClick={() => { setIsBooked(false); setCurrentStep(0); }}
-                className="px-10 py-4 border border-luxury-gold/50 text-luxury-gold rounded-full text-xs font-bold uppercase tracking-widest hover:bg-luxury-gold hover:text-luxury-black transition-all"
+                className="px-10 py-4 border border-brand-blue/50 text-brand-blue rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-white transition-all"
               >
                 Book Another
               </button>
