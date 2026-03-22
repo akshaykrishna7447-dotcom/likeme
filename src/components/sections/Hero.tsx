@@ -36,10 +36,6 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl">
-        <RevealText delay={0.2} className="inline-block px-4 py-1 border border-brand-blue/30 rounded-full mb-6">
-          <span className="text-sm tracking-[0.3em] uppercase text-brand-blue flex items-center gap-2">
-          </span>
-        </RevealText>
 
         <h1 className="text-6xl md:text-8xl font-luxury tracking-tight leading-tight mb-8">
           <RevealText delay={0.4}>Not Just a Salon.</RevealText>
