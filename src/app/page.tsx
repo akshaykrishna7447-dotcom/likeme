@@ -9,10 +9,12 @@ import { Booking } from "@/components/sections/Booking";
 import { Stylists } from "@/components/sections/Stylists";
 import { Footer } from "@/components/layout/Footer";
 import { MagneticCursor } from "@/components/effects/MagneticCursor";
+import { DustParticles } from "@/components/effects/Particles";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative z-0">
+      <DustParticles />
       <MagneticCursor />
       <Navbar />
       <Hero />

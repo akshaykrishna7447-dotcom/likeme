@@ -4,6 +4,7 @@
   --color-brand-black: #0A0A0A;
   --color-brand-blue: #2563EB;
   --color-brand-cyan: #06B6D4;
+  --color-brand-blue: #2563EB;
   --color-brand-white: #FFFFFF;
   
   --font-serif: var(--font-syne);
@@ -40,9 +41,18 @@ h1, h2, h3, h4, .font-luxury {
 
 .glass {
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  will-change: transform, backdrop-filter;
+}
+
+.glass-heavy {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  will-change: transform, backdrop-filter;
 }
 
 .blue-glow {

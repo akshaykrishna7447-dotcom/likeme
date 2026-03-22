@@ -8,7 +8,7 @@ export function MagneticCursor() {
   const cursorX = useMotionValue(-100)
   const cursorY = useMotionValue(-100)
 
-  const springConfig = { damping: 25, stiffness: 150 }
+  const springConfig = { damping: 25, stiffness: 200 }
   const x = useSpring(cursorX, springConfig)
   const y = useSpring(cursorY, springConfig)
 
@@ -43,18 +43,32 @@ export function MagneticCursor() {
   }, [cursorX, cursorY])
 
   return (
-    <motion.div
-      style={{
-        translateX: x,
-        translateY: y,
-        left: -12,
-        top: -12,
-      }}
-      className={`fixed pointer-events-none z-[9999] w-6 h-6 rounded-full border border-luxury-gold mix-blend-difference flex items-center justify-center transition-transform duration-300 ${
-        isHovering ? 'scale-[3] bg-luxury-gold' : 'scale-1'
-      }`}
-    >
-        <div className={`w-1 h-1 bg-luxury-gold rounded-full ${isHovering ? 'opacity-0' : 'opacity-100'}`} />
-    </motion.div>
+    <>
+      {/* Outer Ring */}
+      <motion.div
+        style={{
+          translateX: x,
+          translateY: y,
+          left: -16,
+          top: -16,
+        }}
+        className={`fixed pointer-events-none z-[9999] w-8 h-8 rounded-full border border-brand-blue flex items-center justify-center transition-all duration-300 ${
+          isHovering ? 'scale-[2.5] bg-brand-blue/10 shadow-[0_0_20px_rgba(212,175,55,0.4)]' : 'scale-1 shadow-none'
+        } mix-blend-screen`}
+      />
+      
+      {/* Inner Dot */}
+      <motion.div
+        style={{
+          translateX: x,
+          translateY: y,
+          left: -3,
+          top: -3,
+        }}
+        className={`fixed pointer-events-none z-[9999] w-1.5 h-1.5 bg-brand-blue rounded-full transition-opacity duration-300 shadow-[0_0_10px_rgba(212,175,55,0.8)] ${
+          isHovering ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+    </>
   )
 }
